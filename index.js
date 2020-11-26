@@ -289,7 +289,7 @@ Client.on("message", msg => {
         msg.channel.send("chachi")
 
     if (msg.content == prefix + "autorole")
-    msg.channel.send("Les personnes pris en charge par l'autorole sont :\n-Enzo\n-Louis\n-Jules (Dxsmr)\n-Maxence\n-Cesaire\n-Oscar.")
+    msg.channel.send("Les personnes prises en charge par l'autorole sont :\n-Enzo\n-Louis\n-Jules (Dxsmr)\n-Maxence\n-Cesaire\n-Oscar.")
     /*msg.reply("oui grand pharaon ?");*/
 });
 
