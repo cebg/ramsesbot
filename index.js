@@ -22,6 +22,227 @@ Client.on("guildMemberRemove", member => {
 // le numero de channel id c'est l'identifiant d'un channel texte a mettre pour qu'il ecrive quand qqun join et leave le serv.
 
 
+//--------------------------------------ENZO------------------------------------------------
+Client.on("guildMemberAdd", member => {
+    if(member.id == 180010538758045696){
+     console.log("enzo est arrivé.");
+    member.roles.add("601897509522112532").then(membre => {
+        console.log("Rôle gardien du conseil attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle gardien du conseil fail");
+    })
+    member.roles.add("664861753393283082").then(membre => {
+        console.log("Rôle csgo attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle csgo fail");
+    })
+    member.roles.add("574302993827233830").then(membre => {
+        console.log("Rôle dj attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle dj fail");
+    })
+    member.roles.add("683368751579791490").then(membre => {
+        console.log("Rôle winx esport attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle winx esport fail");
+    })
+}})
+//--------------------------------------DXSMR-----------------------------------------------
+Client.on("guildMemberAdd", member => {
+    if(member.id == 333733236083654657){
+    console.log(" est arrivé.");
+    member.roles.add("325585554106220554").then(membre => {
+        console.log("Rôle plebe attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle plebe fail");
+    })
+    member.roles.add("664861753393283082").then(membre => {
+        console.log("Rôle csgo attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle csgo fail");
+    })
+    member.roles.add("574302993827233830").then(membre => {
+        console.log("Rôle dj attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle dj fail");
+    })
+    member.roles.add("755830979238690967").then(membre => {
+        console.log("Rôle among us attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle among us fail");
+    })
+    member.roles.add("704071520418398218").then(membre => {
+        console.log("Rôle cinephile attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle cinephile fail");
+    })
+    member.roles.add("683368751579791490").then(membre => {
+        console.log("Rôle winx esport attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle winx esport fail");
+    })
+    member.roles.add("753195414458597416").then(membre => {
+        console.log("Rôle penitent attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle penitent fail");
+    })
+    member.roles.add("771437920250232853").then(membre => {
+        console.log("Rôle eco attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle eco fail");
+    })
+}})
+//--------------------------------------AWINK9----------------------------------------------
+Client.on("guildMemberAdd", member => {
+    if(member.id == 227104616901378048){
+    console.log(" est arrivé.");
+    member.roles.add("325585554106220554").then(membre => {
+        console.log("Rôle plebe attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle plebe fail");
+    })
+    member.roles.add("664861753393283082").then(membre => {
+        console.log("Rôle csgo attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle csgo fail");
+    })
+    member.roles.add("574302993827233830").then(membre => {
+        console.log("Rôle dj attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle dj fail");
+    })
+    member.roles.add("755830979238690967").then(membre => {
+        console.log("Rôle among us attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle among us fail");
+    })
+    member.roles.add("704071520418398218").then(membre => {
+        console.log("Rôle cinephile attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle cinephile fail");
+    })
+    member.roles.add("683368751579791490").then(membre => {
+        console.log("Rôle winx esport attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle winx esport fail");
+    })
+    member.roles.add("753195414458597416").then(membre => {
+        console.log("Rôle penitent attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle penitent fail");
+    })
+    member.roles.add("771437920250232853").then(membre => {
+        console.log("Rôle eco attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle eco fail");
+    })
+    member.roles.add("777527251322798127").then(membre => {
+        console.log("Rôle homophobe attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle homophobe fail");
+    })
+}})
+//--------------------------------------LE 16 PUTO-------------------------------------------
+Client.on("guildMemberAdd", member => {
+    if(member.id == 227131011606118400){
+    console.log(" est arrivé.");
+    member.roles.add("325585554106220554").then(membre => {
+        console.log("Rôle plebe attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle plebe fail");
+    })
+    member.roles.add("664861753393283082").then(membre => {
+        console.log("Rôle csgo attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle csgo fail");
+    })
+    member.roles.add("574302993827233830").then(membre => {
+        console.log("Rôle dj attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle dj fail");
+    })
+    member.roles.add("755830979238690967").then(membre => {
+        console.log("Rôle among us attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle among us fail");
+    })
+    member.roles.add("704071520418398218").then(membre => {
+        console.log("Rôle cinephile attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle cinephile fail");
+    })
+    member.roles.add("683368751579791490").then(membre => {
+        console.log("Rôle winx esport attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle winx esport fail");
+    })
+    member.roles.add("753195414458597416").then(membre => {
+        console.log("Rôle penitent attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle penitent fail");
+    })
+    member.roles.add("771437920250232853").then(membre => {
+        console.log("Rôle eco attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle eco fail");
+    })
+    member.roles.add("777527251322798127").then(membre => {
+        console.log("Rôle homophobe attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle homophobe fail");
+    })
+}})
+//--------------------------------------MAMAXOU----------------------------------------------
+Client.on("guildMemberAdd", member => {
+    if(member.id == 339986096144515075){
+    console.log(" est arrivé.");
+    member.roles.add("325585554106220554").then(membre => {
+        console.log("Rôle plebe attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle plebe fail");
+    })
+    member.roles.add("574302993827233830").then(membre => {
+        console.log("Rôle dj attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle dj fail");
+    })
+}})
+//--------------------------------------OSCAR-----------------------------------------------
+Client.on("guildMemberAdd", member => {
+    if(member.id == 202898061385662465){
+    console.log(" est arrivé.");
+    member.roles.add("325585554106220554").then(membre => {
+        console.log("Rôle plebe attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle plebe fail");
+    })
+    member.roles.add("574302993827233830").then(membre => {
+        console.log("Rôle dj attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle dj fail");
+    })
+    member.roles.add("664861753393283082").then(membre => {
+        console.log("Rôle csgo attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle csgo fail");
+    })
+    member.roles.add("755830979238690967").then(membre => {
+        console.log("Rôle among us attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle among us fail");
+    })
+    member.roles.add("683368751579791490").then(membre => {
+        console.log("Rôle winx esport attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle winx esport fail");
+    })
+    member.roles.add("704071520418398218").then(membre => {
+        console.log("Rôle cinephile attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle cinephile fail");
+    })
+}})
+//--------------------------------------FIN AUTO-ROLE----------------------------------------
 Client.on("message", msg => {
     if (msg.author.bot) return; // evidemment pour eviter que cet imbecile se reponde a lui meme.
 
@@ -62,7 +283,10 @@ Client.on("message", msg => {
         msg.reply("je suis fidele a mamaxou...");
 
     if (msg.content == prefix + "cmd")
-        msg.channel.send("resumé des commandes disponibles pour le bot. \n-gay \n-dice \n-salut \n-stat \n-amon \n-sexe \n-suis je le pharaon ?")
+        msg.channel.send("resumé des commandes disponibles pour le bot. \n-gay \n-dice \n-salut \n-stat \n-amon \n-sexe \n-suis je le pharaon ?");
+
+    if (msg.content == prefix + "chachi")
+        msg.channel.send("chachi")
     /*msg.reply("oui grand pharaon ?");*/
 });
 
@@ -77,4 +301,4 @@ Client.on("message", msg => {
     -suis je le pharaon ?
 */
 // https://discord.com/oauth2/authorize?client_id=780802067966197790&scope=bot&permissions=233970752
-Client.login(process.env.token)
+Client.login(process.env.token);
