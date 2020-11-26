@@ -10,13 +10,13 @@ Client.on("ready", () => {
 /*Client.on("guildMemberAdd", member => {
 
     console.log("nvo membre");
-    member.guild.channels.cache.find(channel => channel.id === "325564069748932608").send(":warning: " + member.displayName + " :warning:");
+    member.guild.channels.cache.find(channel => channel.id === "398615341741113354").send(":warning: " + member.displayName + " :warning:");
 
 })
 
 Client.on("guildMemberRemove", member => {
     console.log("un mec s'est fait ban");
-    member.guild.channels.cache.find(channel => channel.id === "325564069748932608").send(":x: " + member.displayName + " :x:");
+    member.guild.channels.cache.find(channel => channel.id === "398615341741113354").send(":x: " + member.displayName + " :x:");
 })*/
 
 // le numero de channel id c'est l'identifiant d'un channel texte a mettre pour qu'il ecrive quand qqun join et leave le serv.
