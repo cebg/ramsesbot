@@ -7,7 +7,7 @@ Client.on("ready", () => {
     console.log("bot en ligne."); //  la ligne 6 et 7 c'est pour mettre le bot en ligne et pour l'afficher.
 });
 
-Client.on("guildMemberAdd", member => {
+/* Client.on("guildMemberAdd", member => {
 
     console.log("nvo membre");
     member.guild.channels.cache.find(channel => channel.id === "398615341741113354").send(":warning: " + member.displayName + " :warning:");
@@ -17,7 +17,7 @@ Client.on("guildMemberAdd", member => {
 Client.on("guildMemberRemove", member => {
     console.log("un mec s'est fait ban");
     member.guild.channels.cache.find(channel => channel.id === "398615341741113354").send(":x: " + member.displayName + " :x:");
-})
+})*/
 
 // le numero de channel id c'est l'identifiant d'un channel texte a mettre pour qu'il ecrive quand qqun join et leave le serv.
 
