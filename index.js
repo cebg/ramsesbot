@@ -7,16 +7,16 @@ Client.on("ready", () => {
     console.log("bot en ligne."); //  la ligne 6 et 7 c'est pour mettre le bot en ligne et pour l'afficher.
 });
 
-/* Client.on("guildMemberAdd", member => {
+/*Client.on("guildMemberAdd", member => {
 
     console.log("nvo membre");
-    member.guild.channels.cache.find(channel => channel.id === "398615341741113354").send(":warning: " + member.displayName + " :warning:");
+    member.guild.channels.cache.find(channel => channel.id === "325564069748932608").send(":warning: " + member.displayName + " :warning:");
 
 })
 
 Client.on("guildMemberRemove", member => {
     console.log("un mec s'est fait ban");
-    member.guild.channels.cache.find(channel => channel.id === "398615341741113354").send(":x: " + member.displayName + " :x:");
+    member.guild.channels.cache.find(channel => channel.id === "325564069748932608").send(":x: " + member.displayName + " :x:");
 })*/
 
 // le numero de channel id c'est l'identifiant d'un channel texte a mettre pour qu'il ecrive quand qqun join et leave le serv.
@@ -283,10 +283,13 @@ Client.on("message", msg => {
         msg.reply("je suis fidele a mamaxou...");
 
     if (msg.content == prefix + "cmd")
-        msg.channel.send("resumé des commandes disponibles pour le bot. \n-gay \n-dice \n-salut \n-stat \n-amon \n-sexe \n-suis je le pharaon ?");
+        msg.channel.send("resumé des commandes disponibles pour le bot. \n-gay \n-dice \n-salut \n-stat \n-amon \n-sexe \n-suis je le pharaon ?\n-autorole");
 
     if (msg.content == prefix + "chachi")
         msg.channel.send("chachi")
+
+    if (msg.content == prefix + "autorole")
+    msg.channel.send("Les personnes pris en charge par l'autorole sont :\n-Enzo\n-Louis\n-Jules (Dxsmr)\n-Maxence\n-Cesaire\n-Oscar.")
     /*msg.reply("oui grand pharaon ?");*/
 });
 
