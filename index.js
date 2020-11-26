@@ -7,16 +7,16 @@ Client.on("ready", () => {
     console.log("bot en ligne."); //  la ligne 6 et 7 c'est pour mettre le bot en ligne et pour l'afficher.
 });
 
-/*Client.on("guildMemberAdd", member => {
+/* Client.on("guildMemberAdd", member => {
 
     console.log("nvo membre");
-    member.guild.channels.cache.find(channel => channel.id === "325564069748932608").send(":warning: " + member.displayName + " :warning:");
+    member.guild.channels.cache.find(channel => channel.id === "398615341741113354").send(":warning: " + member.displayName + " :warning:");
 
 })
 
 Client.on("guildMemberRemove", member => {
     console.log("un mec s'est fait ban");
-    member.guild.channels.cache.find(channel => channel.id === "325564069748932608").send(":x: " + member.displayName + " :x:");
+    member.guild.channels.cache.find(channel => channel.id === "398615341741113354").send(":x: " + member.displayName + " :x:");
 })*/
 
 // le numero de channel id c'est l'identifiant d'un channel texte a mettre pour qu'il ecrive quand qqun join et leave le serv.
@@ -301,4 +301,4 @@ Client.on("message", msg => {
     -suis je le pharaon ?
 */
 // https://discord.com/oauth2/authorize?client_id=780802067966197790&scope=bot&permissions=233970752
-Client.login(process.env.token);
+Client.login(process.env.token)
