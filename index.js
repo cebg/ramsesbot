@@ -24,244 +24,251 @@ Client.on("guildMemberRemove", member => {
 
 //--------------------------------------ENZO------------------------------------------------
 Client.on("guildMemberAdd", member => {
-    if(member.id == 180010538758045696){
-     console.log("enzo est arrivé.");
-    member.roles.add("601897509522112532").then(membre => {
-        console.log("Rôle gardien du conseil attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle gardien du conseil fail");
-    })
-    member.roles.add("664861753393283082").then(membre => {
-        console.log("Rôle csgo attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle csgo fail");
-    })
-    member.roles.add("574302993827233830").then(membre => {
-        console.log("Rôle dj attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle dj fail");
-    })
-    member.roles.add("683368751579791490").then(membre => {
-        console.log("Rôle winx esport attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle winx esport fail");
-    })
-}})
+    if (member.id == 180010538758045696) {
+        console.log("enzo est arrivé.");
+        member.roles.add("601897509522112532").then(membre => {
+            console.log("Rôle gardien du conseil attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle gardien du conseil fail");
+        })
+        member.roles.add("664861753393283082").then(membre => {
+            console.log("Rôle csgo attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle csgo fail");
+        })
+        member.roles.add("574302993827233830").then(membre => {
+            console.log("Rôle dj attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle dj fail");
+        })
+        member.roles.add("683368751579791490").then(membre => {
+            console.log("Rôle winx esport attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle winx esport fail");
+        })
+    }
+})
 //--------------------------------------DXSMR-----------------------------------------------
 Client.on("guildMemberAdd", member => {
-    if(member.id == 333733236083654657){
-    console.log(" est arrivé.");
-    member.roles.add("325585554106220554").then(membre => {
-        console.log("Rôle plebe attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle plebe fail");
-    })
-    member.roles.add("664861753393283082").then(membre => {
-        console.log("Rôle csgo attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle csgo fail");
-    })
-    member.roles.add("574302993827233830").then(membre => {
-        console.log("Rôle dj attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle dj fail");
-    })
-    member.roles.add("755830979238690967").then(membre => {
-        console.log("Rôle among us attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle among us fail");
-    })
-    member.roles.add("704071520418398218").then(membre => {
-        console.log("Rôle cinephile attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle cinephile fail");
-    })
-    member.roles.add("683368751579791490").then(membre => {
-        console.log("Rôle winx esport attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle winx esport fail");
-    })
-    member.roles.add("753195414458597416").then(membre => {
-        console.log("Rôle penitent attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle penitent fail");
-    })
-    member.roles.add("771437920250232853").then(membre => {
-        console.log("Rôle eco attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle eco fail");
-    })
-}})
+    if (member.id == 333733236083654657) {
+        console.log(" est arrivé.");
+        member.roles.add("325585554106220554").then(membre => {
+            console.log("Rôle plebe attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle plebe fail");
+        })
+        member.roles.add("664861753393283082").then(membre => {
+            console.log("Rôle csgo attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle csgo fail");
+        })
+        member.roles.add("574302993827233830").then(membre => {
+            console.log("Rôle dj attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle dj fail");
+        })
+        member.roles.add("755830979238690967").then(membre => {
+            console.log("Rôle among us attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle among us fail");
+        })
+        member.roles.add("704071520418398218").then(membre => {
+            console.log("Rôle cinephile attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle cinephile fail");
+        })
+        member.roles.add("683368751579791490").then(membre => {
+            console.log("Rôle winx esport attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle winx esport fail");
+        })
+        member.roles.add("753195414458597416").then(membre => {
+            console.log("Rôle penitent attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle penitent fail");
+        })
+        member.roles.add("771437920250232853").then(membre => {
+            console.log("Rôle eco attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle eco fail");
+        })
+    }
+})
 //--------------------------------------AWINK9----------------------------------------------
 Client.on("guildMemberAdd", member => {
-    if(member.id == 227104616901378048){
-    console.log(" est arrivé.");
-    member.roles.add("325585554106220554").then(membre => {
-        console.log("Rôle plebe attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle plebe fail");
-    })
-    member.roles.add("664861753393283082").then(membre => {
-        console.log("Rôle csgo attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle csgo fail");
-    })
-    member.roles.add("574302993827233830").then(membre => {
-        console.log("Rôle dj attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle dj fail");
-    })
-    member.roles.add("755830979238690967").then(membre => {
-        console.log("Rôle among us attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle among us fail");
-    })
-    member.roles.add("704071520418398218").then(membre => {
-        console.log("Rôle cinephile attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle cinephile fail");
-    })
-    member.roles.add("683368751579791490").then(membre => {
-        console.log("Rôle winx esport attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle winx esport fail");
-    })
-    member.roles.add("753195414458597416").then(membre => {
-        console.log("Rôle penitent attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle penitent fail");
-    })
-    member.roles.add("771437920250232853").then(membre => {
-        console.log("Rôle eco attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle eco fail");
-    })
-    member.roles.add("777527251322798127").then(membre => {
-        console.log("Rôle homophobe attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle homophobe fail");
-    })
-}})
+    if (member.id == 227104616901378048) {
+        console.log(" est arrivé.");
+        member.roles.add("325585554106220554").then(membre => {
+            console.log("Rôle plebe attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle plebe fail");
+        })
+        member.roles.add("664861753393283082").then(membre => {
+            console.log("Rôle csgo attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle csgo fail");
+        })
+        member.roles.add("574302993827233830").then(membre => {
+            console.log("Rôle dj attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle dj fail");
+        })
+        member.roles.add("755830979238690967").then(membre => {
+            console.log("Rôle among us attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle among us fail");
+        })
+        member.roles.add("704071520418398218").then(membre => {
+            console.log("Rôle cinephile attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle cinephile fail");
+        })
+        member.roles.add("683368751579791490").then(membre => {
+            console.log("Rôle winx esport attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle winx esport fail");
+        })
+        member.roles.add("753195414458597416").then(membre => {
+            console.log("Rôle penitent attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle penitent fail");
+        })
+        member.roles.add("771437920250232853").then(membre => {
+            console.log("Rôle eco attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle eco fail");
+        })
+        member.roles.add("777527251322798127").then(membre => {
+            console.log("Rôle homophobe attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle homophobe fail");
+        })
+    }
+})
 //--------------------------------------LE 16 PUTO-------------------------------------------
 Client.on("guildMemberAdd", member => {
-    if(member.id == 227131011606118400){
-    console.log(" est arrivé.");
-    member.roles.add("325585554106220554").then(membre => {
-        console.log("Rôle plebe attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle plebe fail");
-    })
-    member.roles.add("664861753393283082").then(membre => {
-        console.log("Rôle csgo attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle csgo fail");
-    })
-    member.roles.add("574302993827233830").then(membre => {
-        console.log("Rôle dj attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle dj fail");
-    })
-    member.roles.add("755830979238690967").then(membre => {
-        console.log("Rôle among us attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle among us fail");
-    })
-    member.roles.add("704071520418398218").then(membre => {
-        console.log("Rôle cinephile attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle cinephile fail");
-    })
-    member.roles.add("683368751579791490").then(membre => {
-        console.log("Rôle winx esport attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle winx esport fail");
-    })
-    member.roles.add("753195414458597416").then(membre => {
-        console.log("Rôle penitent attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle penitent fail");
-    })
-    member.roles.add("771437920250232853").then(membre => {
-        console.log("Rôle eco attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle eco fail");
-    })
-    member.roles.add("777527251322798127").then(membre => {
-        console.log("Rôle homophobe attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle homophobe fail");
-    })
-}})
+    if (member.id == 227131011606118400) {
+        console.log(" est arrivé.");
+        member.roles.add("325585554106220554").then(membre => {
+            console.log("Rôle plebe attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle plebe fail");
+        })
+        member.roles.add("664861753393283082").then(membre => {
+            console.log("Rôle csgo attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle csgo fail");
+        })
+        member.roles.add("574302993827233830").then(membre => {
+            console.log("Rôle dj attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle dj fail");
+        })
+        member.roles.add("755830979238690967").then(membre => {
+            console.log("Rôle among us attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle among us fail");
+        })
+        member.roles.add("704071520418398218").then(membre => {
+            console.log("Rôle cinephile attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle cinephile fail");
+        })
+        member.roles.add("683368751579791490").then(membre => {
+            console.log("Rôle winx esport attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle winx esport fail");
+        })
+        member.roles.add("753195414458597416").then(membre => {
+            console.log("Rôle penitent attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle penitent fail");
+        })
+        member.roles.add("771437920250232853").then(membre => {
+            console.log("Rôle eco attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle eco fail");
+        })
+        member.roles.add("777527251322798127").then(membre => {
+            console.log("Rôle homophobe attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle homophobe fail");
+        })
+    }
+})
 //--------------------------------------MAMAXOU----------------------------------------------
 Client.on("guildMemberAdd", member => {
-    if(member.id == 339986096144515075){
-    console.log(" est arrivé.");
-    member.roles.add("325585554106220554").then(membre => {
-        console.log("Rôle plebe attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle plebe fail");
-    })
-    member.roles.add("574302993827233830").then(membre => {
-        console.log("Rôle dj attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle dj fail");
-    })
-}})
+    if (member.id == 339986096144515075) {
+        console.log(" est arrivé.");
+        member.roles.add("325585554106220554").then(membre => {
+            console.log("Rôle plebe attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle plebe fail");
+        })
+        member.roles.add("574302993827233830").then(membre => {
+            console.log("Rôle dj attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle dj fail");
+        })
+    }
+})
 //--------------------------------------OSCAR-----------------------------------------------
 Client.on("guildMemberAdd", member => {
-    if(member.id == 202898061385662465){
-    console.log(" est arrivé.");
-    member.roles.add("325585554106220554").then(membre => {
-        console.log("Rôle plebe attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle plebe fail");
-    })
-    member.roles.add("574302993827233830").then(membre => {
-        console.log("Rôle dj attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle dj fail");
-    })
-    member.roles.add("664861753393283082").then(membre => {
-        console.log("Rôle csgo attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle csgo fail");
-    })
-    member.roles.add("755830979238690967").then(membre => {
-        console.log("Rôle among us attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle among us fail");
-    })
-    member.roles.add("683368751579791490").then(membre => {
-        console.log("Rôle winx esport attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle winx esport fail");
-    })
-    member.roles.add("704071520418398218").then(membre => {
-        console.log("Rôle cinephile attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle cinephile fail");
-    })
-}})
+    if (member.id == 202898061385662465) {
+        console.log(" est arrivé.");
+        member.roles.add("325585554106220554").then(membre => {
+            console.log("Rôle plebe attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle plebe fail");
+        })
+        member.roles.add("574302993827233830").then(membre => {
+            console.log("Rôle dj attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle dj fail");
+        })
+        member.roles.add("664861753393283082").then(membre => {
+            console.log("Rôle csgo attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle csgo fail");
+        })
+        member.roles.add("755830979238690967").then(membre => {
+            console.log("Rôle among us attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle among us fail");
+        })
+        member.roles.add("683368751579791490").then(membre => {
+            console.log("Rôle winx esport attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle winx esport fail");
+        })
+        member.roles.add("704071520418398218").then(membre => {
+            console.log("Rôle cinephile attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle cinephile fail");
+        })
+    }
+})
 //--------------------------------------CESAR------------------------------------------------
 Client.on("guildMemberAdd", member => {
-    if(member.id == 173439999331663872){
-    console.log(" est arrivé.");
-    member.roles.add("325585554106220554").then(membre => {
-        console.log("Rôle plebe attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle plebe fail");
-    })
-    member.roles.add("574302993827233830").then(membre => {
-        console.log("Rôle dj attribué. ==> " + membre.displayName);
-    }).catch(() => {
-        console.log("Rôle dj fail");
-    })
-}})
+    if (member.id == 173439999331663872) {
+        console.log(" est arrivé.");
+        member.roles.add("325585554106220554").then(membre => {
+            console.log("Rôle plebe attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle plebe fail");
+        })
+        member.roles.add("574302993827233830").then(membre => {
+            console.log("Rôle dj attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle dj fail");
+        })
+    }
+})
 //--------------------------------------FIN AUTO-ROLE----------------------------------------
 Client.on("message", msg => {
     if (msg.author.bot) return; // evidemment pour eviter que cet imbecile se reponde a lui meme.
 
-    
+
     if (msg.author.id == 290186637563002882 && msg.content == prefix + "suis je le pharaon ?") {
         msg.channel.send("tu es le pharaon");
     }
@@ -303,11 +310,19 @@ Client.on("message", msg => {
     if (msg.content == prefix + "chachi")
         msg.channel.send("chachi")
 
-    if (msg.content == prefix + "autorole")
-    msg.channel.send("Les personnes prises en charge par l'autorole sont :\n-Enzo\n-Louis\n-Jules (Dxsmr)\n-Maxence\n-Cesaire\n-Oscar.")
+    if {(msg.content == prefix + "autorole")
+        msg.channel.send("Les personnes prises en charge par l'autorole sont :\n-Enzo\n-Louis\n-Jules (Dxsmr)\n-Maxence\n-Cesaire\n-Oscar.")}
 
-    if(msg.author.id == 173439999331663872)
-    msg.reply("chut")
+    if {(msg.author.id == 173439999331663872)
+        msg.reply("chut")}
+    if {(msg.author.id == 325563711290867713)
+        msg.reply("grr")}
+    if {(msg.content == prefix + "test")
+        msg.reply("positif").then(message => {
+            console.log("reussi");
+        }).catch(() => {
+            console.log("echec");
+        })}
     /*msg.reply("oui grand pharaon ?");*/
 });
 
