@@ -379,7 +379,7 @@ Client.on("message", msg => {
         msg.reply("je suis fidele a mamaxou...");
 
     if (msg.content == prefix + "cmd") {
-        msg.channel.send("resumé des commandes disponibles pour le bot. \n-gay \n-dice \n-salut \n-stat \n-sexe \n-suis je le pharaon ?\n-autorole\n-mute (ADMIN) \n-kick (ADMIN)\n-tempmute(ADMIN) ==> -tempmute <joueur> <secondes>\n-react");
+        msg.channel.send("resumé des commandes disponibles pour le bot. \n-gay \n-dice \n-salut \n-stat \n-sexe \n-suis je le pharaon ?\n-autorole\n-mute (ADMIN) \n-kick (ADMIN)\n-tempmute(ADMIN)\n-react");
     }
 
     if (msg.content == prefix + "chachi") {
