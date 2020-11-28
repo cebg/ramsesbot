@@ -328,7 +328,7 @@ Client.on("message", msg => {
                 }, args [2] * 1000);
             }
         }
-
+    } // supprimer cette acolade si je rajoute le code du dessous
 
 
 
