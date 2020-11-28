@@ -343,5 +343,4 @@ Client.on("message", msg => {
     -suis je le pharaon ?
 */
 // https://discord.com/oauth2/authorize?client_id=780802067966197790&scope=bot&permissions=233970752
-//Client.login("NzgwODAyMDY3OTY2MTk3Nzkw.X70Ylw.RHgPv9oSoPAOxApug3EpTp8D9wk")
 Client.login(process.env.token)
