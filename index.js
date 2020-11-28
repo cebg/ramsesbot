@@ -319,15 +319,14 @@ Client.on("message", msg => {
     if (msg.author.id == 173439999331663872) {
         msg.reply("chut")
     }
-    if (msg.author.id == 325563711290867713) {
-        msg.reply("grr")
-    }
+
     if (msg.content == prefix + "test") {
         msg.reply("positif").then(message => {
             console.log("reussi");
         }).catch(() => {
             console.log("echec");
         })
+        msg.channel.send("au covid...")
     }
     /*msg.reply("oui grand pharaon ?");*/
 });
