@@ -274,51 +274,7 @@ Client.on("message", msg => {
     }
     else if (msg.author.id != 290186637563002882 && msg.content == prefix + "suis je le pharaon ?") { msg.channel.send("tu n'es pas le pharaon imposteur.") }
 
-        // ------------------------------------KICK via commandes----------------------------------------
-        if (msg.member.hasPermission("ADMINISTRATOR")) {
-            if (msg.content.startsWith(prefix + "kick")) {
-                let mention = msg.mentions.members.first();
-                if (mention == undefined) {
-                    msg.reply("Aucune personne mentionné.");
-                }
-                else {
-                    if (mention.kickable) {
-                        mention.kick();
-                        msg.channel.send(mention.displayName + " a été kick.");
-                    }
-                    else {
-                        msg.reply("Pas la permission de kick cette personne.");
-                    }
-                }
-            }
-            //------------------------------------MUTE via commandes------------------------------------------
     
-            else if (msg.content.startsWith(prefix + "unmute")) {
-                let mention = msg.mentions.members.first();
-                if (mention == undefined) {
-                    msg.reply("Aucune personne mentionné.");
-                }
-                else {
-                    mention.roles.add("325585554106220554");
-                    msg.reply(mention.displayName + " est unmute")
-                }
-            }
-            else if (msg.content.startsWith(prefix + "mute")) {
-                let mention = msg.mentions.members.first();
-                if (mention == undefined) {
-                    msg.reply("Aucune personne mentionné.");
-                }
-                else {
-                    mention.roles.remove("325585554106220554");
-                    msg.reply(mention.displayName + " est mute")
-                }
-            }
-    // -----------------------------------Fin MUTE via commandes-------------------------------------
-            else {
-                msg.reply("Tu n'as pas la permission d'effectuer cette commande.")
-            }
-        }
-    //------------------------------------Fin KICK via commandes------------------------------------------
 
 
     if (msg.content == prefix + "stat") {   //afin que chaque citoyen me revele son identité.
@@ -351,7 +307,7 @@ Client.on("message", msg => {
         msg.reply("je suis fidele a mamaxou...");
 
     if (msg.content == prefix + "cmd") {
-        msg.channel.send("resumé des commandes disponibles pour le bot. \n-gay \n-dice \n-salut \n-stat \n-kick \n-sexe \n-suis je le pharaon ?\n-autorole\n-mute");
+        msg.channel.send("resumé des commandes disponibles pour le bot. \n-gay \n-dice \n-salut \n-stat \n-amon \n-sexe \n-suis je le pharaon ?\n-autorole");
     }
 
     if (msg.content == prefix + "chachi") {
