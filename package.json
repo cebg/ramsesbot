@@ -1,7 +1,7 @@
 {
   "name": "ramsesbot",
-  "version": "1.0.0",
-  "description": "bot fait pour procurer un esclave au pharaon qu'est Matthieu",
+  "version": "1.1.0",
+  "description": "Bot discord dans le but d'optimiser les pouvoirs du haut conseils",
   "main": "index.js",
   "dependencies": {
     "discord.js": "^12.5.0"
