@@ -268,6 +268,78 @@ Client.on("guildMemberAdd", member => {
 Client.on("message", msg => {
     if (msg.author.bot) return; // evidemment pour eviter que cet imbecile se reponde a lui meme.
 
+    if (msg.content == prefix + "?") {
+        msg.react("❔")
+    }
+    // ------------------------------------KICK via commandes----------------------------------------
+    if (msg.member.hasPermission("ADMINISTRATOR")) {
+        if (msg.content.startsWith(prefix + "kick")) {
+            let mention = msg.mentions.members.first();
+            if (mention == undefined) {
+                msg.reply("Aucune personne mentionné.");
+            }
+            else {
+                if (mention.kickable) {
+                    mention.kick();
+                    msg.channel.send(mention.displayName + " a été kick.");
+                }
+                else {
+                    msg.reply("Pas la permission de kick cette personne.");
+                }
+            }
+        }
+
+        //------------------------------------MUTE via commandes------------------------------------------
+
+        else if (msg.content.startsWith(prefix + "unmute")) {
+            let mention = msg.mentions.members.first();
+            if (mention == undefined) {
+                msg.reply("Aucune personne mentionné.");
+            }
+            else {
+                mention.roles.add("325585554106220554");
+                msg.reply(mention.displayName + " est unmute")
+            }
+        }
+        else if (msg.content.startsWith(prefix + "mute")) {
+            let mention = msg.mentions.members.first();
+            if (mention == undefined) {
+                msg.reply("Aucune personne mentionné.");
+            }
+            else {
+                mention.roles.remove("325585554106220554");
+                msg.reply(mention.displayName + " est mute")
+            }
+        }
+        // -----------------------------------TEMPMUTE via commandes------------------------------------------
+        else if (msg.content.startsWith(prefix + "tempmute")){
+            let mention = msg.mentions.members.first();
+
+            if(mention == undefined){
+                msg.reply("Aucune personne n'est mentionné");
+            }
+            else {
+                let args = msg.content.split(" ");
+
+                mention.roles.remove("325585554106220554");
+                setTimeout(function(){
+                    mention.roles.add("325585554106220554")
+                    msg.channel.send("<@" + mention.id + "> est demute.")
+                }, args [2] * 1000);
+            }
+        }
+
+
+
+
+        // -----------------------------------Fin MUTE+TEMPMUTE+KICK via commandes----------------------------
+        /* else {
+             msg.reply("Tu n'as pas la permission d'effectuer cette commande.")
+         }*/
+        // si un jour je trouve le moyen de faire marcher cette commande je bondis de joie (en gros si tu tentes de faire la commande mais que t'es pas admin ca t'envoie un message d'erreur.)
+    }
+    //------------------------------------Fin KICK via commandes------------------------------------------
+
 
     if (msg.author.id == 290186637563002882 && msg.content == prefix + "suis je le pharaon ?") {
         msg.channel.send("tu es le pharaon");
@@ -307,7 +379,7 @@ Client.on("message", msg => {
         msg.reply("je suis fidele a mamaxou...");
 
     if (msg.content == prefix + "cmd") {
-        msg.channel.send("resumé des commandes disponibles pour le bot. \n-gay \n-dice \n-salut \n-stat \n-amon \n-sexe \n-suis je le pharaon ?\n-autorole");
+        msg.channel.send("resumé des commandes disponibles pour le bot. \n-gay \n-dice \n-salut \n-stat \n-sexe \n-suis je le pharaon ?\n-autorole\n-mute (ADMIN) \n-kick (ADMIN)\n-tempmute(ADMIN)\n-react");
     }
 
     if (msg.content == prefix + "chachi") {
