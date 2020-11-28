@@ -244,7 +244,7 @@ Client.on("guildMemberAdd", member => {
 }})
 //--------------------------------------CESAR------------------------------------------------
 Client.on("guildMemberAdd", member => {
-    if(member.id == 202898061385662465){
+    if(member.id == 173439999331663872){
     console.log(" est arrivé.");
     member.roles.add("325585554106220554").then(membre => {
         console.log("Rôle plebe attribué. ==> " + membre.displayName);
