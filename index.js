@@ -305,6 +305,9 @@ Client.on("message", msg => {
 
     if (msg.content == prefix + "autorole")
     msg.channel.send("Les personnes prises en charge par l'autorole sont :\n-Enzo\n-Louis\n-Jules (Dxsmr)\n-Maxence\n-Cesaire\n-Oscar.")
+
+    if(msg.author.id == 173439999331663872)
+    msg.reply("chut")
     /*msg.reply("oui grand pharaon ?");*/
 });
 
