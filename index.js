@@ -304,25 +304,31 @@ Client.on("message", msg => {
     else if (msg.content == prefix + "sexe")
         msg.reply("je suis fidele a mamaxou...");
 
-    if (msg.content == prefix + "cmd")
+    if (msg.content == prefix + "cmd") {
         msg.channel.send("resumé des commandes disponibles pour le bot. \n-gay \n-dice \n-salut \n-stat \n-amon \n-sexe \n-suis je le pharaon ?\n-autorole");
+    }
 
-    if (msg.content == prefix + "chachi")
+    if (msg.content == prefix + "chachi") {
         msg.channel.send("chachi")
+    }
 
-    if {(msg.content == prefix + "autorole")
-        msg.channel.send("Les personnes prises en charge par l'autorole sont :\n-Enzo\n-Louis\n-Jules (Dxsmr)\n-Maxence\n-Cesaire\n-Oscar.")}
+    if (msg.content == prefix + "autorole") {
+        msg.channel.send("Les personnes prises en charge par l'autorole sont :\n-Enzo\n-Louis\n-Jules (Dxsmr)\n-Maxence\n-Cesaire\n-Oscar.")
+    }
 
-    if {(msg.author.id == 173439999331663872)
-        msg.reply("chut")}
-    if {(msg.author.id == 325563711290867713)
-        msg.reply("grr")}
-    if {(msg.content == prefix + "test")
+    if (msg.author.id == 173439999331663872) {
+        msg.reply("chut")
+    }
+    if (msg.author.id == 325563711290867713) {
+        msg.reply("grr")
+    }
+    if (msg.content == prefix + "test") {
         msg.reply("positif").then(message => {
             console.log("reussi");
         }).catch(() => {
             console.log("echec");
-        })}
+        })
+    }
     /*msg.reply("oui grand pharaon ?");*/
 });
 
@@ -337,4 +343,5 @@ Client.on("message", msg => {
     -suis je le pharaon ?
 */
 // https://discord.com/oauth2/authorize?client_id=780802067966197790&scope=bot&permissions=233970752
+//Client.login("NzgwODAyMDY3OTY2MTk3Nzkw.X70Ylw.RHgPv9oSoPAOxApug3EpTp8D9wk")
 Client.login(process.env.token)
