@@ -242,6 +242,21 @@ Client.on("guildMemberAdd", member => {
         console.log("Rôle cinephile fail");
     })
 }})
+//--------------------------------------CESAR------------------------------------------------
+Client.on("guildMemberAdd", member => {
+    if(member.id == 202898061385662465){
+    console.log(" est arrivé.");
+    member.roles.add("325585554106220554").then(membre => {
+        console.log("Rôle plebe attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle plebe fail");
+    })
+    member.roles.add("574302993827233830").then(membre => {
+        console.log("Rôle dj attribué. ==> " + membre.displayName);
+    }).catch(() => {
+        console.log("Rôle dj fail");
+    })
+}})
 //--------------------------------------FIN AUTO-ROLE----------------------------------------
 Client.on("message", msg => {
     if (msg.author.bot) return; // evidemment pour eviter que cet imbecile se reponde a lui meme.
