@@ -264,6 +264,33 @@ Client.on("guildMemberAdd", member => {
         })
     }
 })
+//--------------------------------------FERNANDEZ(ALTACCOUNT)--------------------------------
+Client.on("guildMemberAdd", member => {
+    if (member.id == 781113881887899659) {
+        console.log(" est arrivé.");
+        member.roles.add("325585554106220554").then(membre => {
+            console.log("Rôle plebe attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle plebe fail");
+        })
+        member.roles.add("574302993827233830").then(membre => {
+            console.log("Rôle dj attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle dj fail");
+        })
+    }
+})
+//--------------------------------------JEAN/AWAK--------------------------------------------
+Client.on("guildMemberAdd", member => {
+    if (member.id == 335805930698571786) {
+        console.log(" est arrivé.");
+        member.roles.add("325585554106220554").then(membre => {
+            console.log("Rôle plebe attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle plebe fail");
+        })
+    }
+})
 //--------------------------------------FIN AUTO-ROLE----------------------------------------
 Client.on("message", msg => {
     if (msg.author.bot) return; // evidemment pour eviter que cet imbecile se reponde a lui meme.
@@ -402,7 +429,7 @@ Client.on("message", msg => {
     }
 
     if (msg.content == prefix + "autorole") {
-        msg.channel.send("Les personnes prises en charge par l'autorole sont :\n-Enzo\n-Louis\n-Jules (Dxsmr)\n-Maxence\n-Cesaire\n-Oscar.")
+        msg.channel.send("Les personnes prises en charge par l'autorole sont :\n-Enzo\n-Louis\n-Jules (Dxsmr)\n-Maxence\n-Cesaire\n-Oscar\n-Fernandez\nJean/Awak")
     }
 
     if (msg.author.id == 173439999331663872) {
