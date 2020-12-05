@@ -446,6 +446,9 @@ Client.on("message", msg => {
     }
     /*msg.reply("oui grand pharaon ?");*/
 });
+Client.on("ready", () => {
+    Client.user.setActivity(prefix + "cmd", { type: 'WATCHING' });
+});
 
 /* 
     resumé des commandes disponibles pour le bot.
