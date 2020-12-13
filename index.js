@@ -31,6 +31,11 @@ Client.on("guildMemberAdd", member => {
         }).catch(() => {
             console.log("Rôle gardien du conseil fail");
         })*/
+        member.roles.add("325585554106220554").then(membre => {
+            console.log("Rôle plebe attribué. ==> " + membre.displayName);
+        }).catch(() => {
+            console.log("Rôle plebe fail");
+        })
         member.roles.add("664861753393283082").then(membre => {
             console.log("Rôle csgo attribué. ==> " + membre.displayName);
         }).catch(() => {
