@@ -26,11 +26,11 @@ Client.on("guildMemberRemove", member => {
 Client.on("guildMemberAdd", member => {
     if (member.id == 180010538758045696) {
         console.log("enzo est arrivé.");
-        member.roles.add("601897509522112532").then(membre => {
+      /*  member.roles.add("601897509522112532").then(membre => {
             console.log("Rôle gardien du conseil attribué. ==> " + membre.displayName);
         }).catch(() => {
             console.log("Rôle gardien du conseil fail");
-        })
+        })*/
         member.roles.add("664861753393283082").then(membre => {
             console.log("Rôle csgo attribué. ==> " + membre.displayName);
         }).catch(() => {
