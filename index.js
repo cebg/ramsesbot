@@ -386,6 +386,30 @@ Client.on("message", msg => {
         }
     }
     //------------------------------------Fin KICK via commandes------------------------------------------
+            // -----------------------------------CLEAR-------------------------------------------------
+            if (msg.content.startsWith("-del")) {
+                msg.delete();
+                if (msg.member.hasPermission("MANAGE_MESSAGES")) {
+                    let args = msg.content.split(" ")
+                    if (args[1]) {
+                        if (!isNaN(args[1]) && args[1] >= 1 && args[1] <= 99) {
+    
+                            msg.channel.bulkDelete(args[1])
+    
+    
+                        }
+                        else if(isNaN(args[1])) {
+                            msg.author.send("Il faut renseigner un nombre")
+                        }
+    
+                    }
+    
+                }
+               else if (!msg.member.hasPermission("MANAGE_MESSAGES")) {
+                msg.author.send("Pas la permission de supprimer des messages avec la commande -del sur le server"+ msg.guild.name +".")
+               }
+            }
+            // -----------------------------------FIN-CLEAR-----------------------------------------------
 
 
     if (msg.author.id == 290186637563002882 && msg.content == prefix + "suis je le pharaon ?") {
@@ -426,7 +450,7 @@ Client.on("message", msg => {
         msg.reply("je suis fidele a mamaxou...");
 
     if (msg.content == prefix + "cmd") {
-        msg.author.send("resumé des commandes disponibles pour le bot.\nTEMPMUTE+KICK+MUTE v1.2 \n-gay \n-dice \n-salut \n-stat \n-sexe \n-suis je le pharaon ?\n-autorole\n-mute (ADMIN) \n-kick (ADMIN)\n-tempmute(ADMIN) => -tempmute <@personne> <nbSecondes>\n-react");
+        msg.author.send("resumé des commandes disponibles pour le bot.\nTEMPMUTE+KICK+MUTE v1.2 \n-gay \n-dice \n-salut \n-stat \n-sexe \n-suis je le pharaon ?\n-autorole\n-mute (ADMIN) \n-kick (ADMIN)\n-tempmute(ADMIN) => -tempmute <@personne> <nbSecondes>\n-react\n-del <nbMessage>");
     }
 
     if (msg.content == prefix + "chachi") {
