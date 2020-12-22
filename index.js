@@ -450,6 +450,7 @@ Client.on("message", msg => {
         msg.reply("je suis fidele a mamaxou...");
 
     if (msg.content == prefix + "cmd") {
+        msg.delete()
         msg.author.send("resumé des commandes disponibles pour le bot.\nTEMPMUTE+KICK+MUTE v1.2 \n-gay \n-dice \n-salut \n-stat \n-sexe \n-suis je le pharaon ?\n-autorole\n-mute (ADMIN) \n-kick (ADMIN)\n-tempmute(ADMIN) => -tempmute <@personne> <nbSecondes>\n-react\n-del <nbMessage>");
     }
 
@@ -458,6 +459,7 @@ Client.on("message", msg => {
     }
 
     if (msg.content == prefix + "autorole") {
+        msg.delete()
         msg.author.send("Les personnes prises en charge par l'autorole sont :\n-Enzo\n-Louis\n-Jules (Dxsmr)\n-Maxence\n-Cesaire\n-Oscar\n-Fernandez\nJean/Awak")
     }
 
