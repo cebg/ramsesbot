@@ -406,7 +406,7 @@ Client.on("message", msg => {
     
                 }
                else if (!msg.member.hasPermission("MANAGE_MESSAGES")) {
-                msg.author.send("Pas la permission de supprimer des messages avec la commande -del sur le server"+ msg.guild.name +".")
+                msg.author.send("Pas la permission de supprimer des messages avec la commande -del sur le server "+ msg.guild.name +".")
                }
             }
             // -----------------------------------FIN-CLEAR-----------------------------------------------
