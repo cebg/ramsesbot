@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 
 const Client = new Discord.Client;
+const ytdl = require("ytdl-core") //(Pour qu'il puisse communiquer avec ytb)
 const prefix = "-"; // le prefixe est un tiret la donc a envoyer avant chaque message si je merdes pas trop.
 
 Client.on("ready", () => {
@@ -386,6 +387,38 @@ Client.on("message", msg => {
         }
     }
     //------------------------------------Fin KICK via commandes------------------------------------------
+        //-----------------------------------------MUSIQUE-/TEST/----------------------------------------
+        Client.on("message", msg => {
+            if (msg.content.startsWith(prefix + "p")) {
+                if (msg.member.voice.channel) {
+                    msg.member.voice.channel.join().then(connection => {
+                        let args = msg.content.split(" ")
+                        if (!args[1]) {
+                            msg.channel.send("**Aucun lien youtube.**")
+                            connection.disconnect()
+                        }
+                        else {
+                            let dispatcher = connection.play(ytdl(args[1], { quality: "highestaudio" }))
+                            dispatcher.on("finish", () => {
+                                dispatcher.destroy()
+                                connection.disconnect()
+                            })
+    
+                            dispatcher.on("error", err => {
+                                console.log("erreur de dispatcher" + err)
+                            })
+                        }
+    
+                    }).catch(err => {
+                        msg.reply("**Impossible de se connecter ou aucun lien youtube donné!\n Peut être un probleme de rôles.**")
+                        console.log("L'erreur ==>" + err)
+                    })
+                }
+                else {
+                    msg.reply("Utilisateur non-connecté en vocal.")
+                }
+            }
+        })
             // -----------------------------------CLEAR-------------------------------------------------
             if (msg.content.startsWith("-del")) {
                 msg.delete();
@@ -451,7 +484,7 @@ Client.on("message", msg => {
 
     if (msg.content == prefix + "cmd") {
         msg.delete()
-        msg.author.send("resumé des commandes disponibles pour le bot.\nTEMPMUTE+KICK+MUTE v1.2 \n-gay \n-dice \n-salut \n-stat \n-sexe \n-suis je le pharaon ?\n-autorole\n-mute (ADMIN) \n-kick (ADMIN)\n-tempmute(ADMIN) => -tempmute <@personne> <nbSecondes>\n-react\n-del <nbMessage>");
+        msg.author.send("resumé des commandes disponibles pour le bot.\nTEMPMUTE+KICK+MUTE v1.2 \n-gay \n-dice \n-salut \n-stat \n-sexe \n-suis je le pharaon ?\n-autorole\n-mute (ADMIN) \n-kick (ADMIN)\n-tempmute(ADMIN) => -tempmute <@personne> <nbSecondes>\n-react\n-del <nbMessage>\n-p <URLYTB>");
     }
 
     if (msg.content == prefix + "chachi") {
