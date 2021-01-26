@@ -482,7 +482,23 @@ Client.on("message", msg => {
     else if (msg.content == prefix + "sexe")
         msg.reply("je suis fidele a mamaxou...");
 
-    if (msg.content == prefix + "cmd") {
+        if (msg.content == prefix + "cmd") {
+            var embed = new Discord.MessageEmbed()
+            .setColor("#FFFF00")
+            .setTitle("**Commandes de RamsesBot.**")
+            .setAuthor("lebg#8303", "https://media.discordapp.net/attachments/782252712024342558/803734305410252820/ErYCnRAXAAUQjv0.png?width=960&height=638" ,/*"Ici inserer le lien du site robinmichelle."*/)
+            .setDescription("resumé des commandes disponibles pour le bot.\nTEMPMUTE+KICK+MUTE v1.2")
+            .setThumbnail("https://media.discordapp.net/attachments/782289396732526613/803725723545501736/IMG_20200408_213813.jpg")
+            .addField("Commandes utile", "-salut \n-stat \n-sexe \n-suis je le pharaon ?\n-p <URLYTB>\n-autorole\n-?", true)
+            .addField("Commandes Chachi", "-gay\n-dice", true)
+            .addField("Commande Admin", "-mute (ADMIN) \n-kick (ADMIN)\n-tempmute(ADMIN) => -tempmute <@personne> <nbSecondes>\n-del <nbMessage>", true)
+            .setFooter("Ne pas envoyer de dm au RamsesBot!")
+            .setTimestamp()
+            msg.author.send(embed)
+            
+        }
+
+    if (msg.content == prefix + "cmd2") {
         msg.delete()
         msg.author.send("resumé des commandes disponibles pour le bot.\nTEMPMUTE+KICK+MUTE v1.2 \n-gay \n-dice \n-salut \n-stat \n-sexe \n-suis je le pharaon ?\n-autorole\n-mute (ADMIN) \n-kick (ADMIN)\n-tempmute(ADMIN) => -tempmute <@personne> <nbSecondes>\n-react\n-del <nbMessage>\n-p <URLYTB>");
     }
