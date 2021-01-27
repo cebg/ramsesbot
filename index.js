@@ -419,29 +419,41 @@ Client.on("message", msg => {
                 }
             }
         })
-            // -----------------------------------CLEAR-------------------------------------------------
-            if (msg.content.startsWith("-del")) {
-                msg.delete();
-                if (msg.member.hasPermission("MANAGE_MESSAGES")) {
-                    let args = msg.content.split(" ")
-                    if (args[1]) {
-                        if (!isNaN(args[1]) && args[1] >= 1 && args[1] <= 99) {
-    
-                            msg.channel.bulkDelete(args[1])
-    
-    
-                        }
-                        else if(isNaN(args[1])) {
-                            msg.author.send("Il faut renseigner un nombre")
-                        }
-    
+        // -----------------------------------CLEAR-------------------------------------------------
+        if (msg.content.startsWith("-del")) {
+            msg.delete();
+            if (msg.member.hasPermission("MANAGE_MESSAGES")) {
+                let args = msg.content.split(" ")
+                if (args[1]) {
+                    if (!isNaN(args[1]) && args[1] >= 1 && args[1] <= 99) {
+
+                        msg.channel.bulkDelete(args[1])
+                        console.log(args[1] + " messages on été supprimés.")
+                        const channel01 = Client.channels.cache.find(channel => channel.id === "804062264821940255")
+                        channel01.send(args[1] + " messages on été supprimés.")
+                        console.log("Message envoyé dans le channel log sur discord.")
+
                     }
-    
+                    else if(isNaN(args[1])) {
+
+                        var embed3 = new Discord.MessageEmbed()
+                        .setColor("#FFFF00")
+                        .setTitle("Echec -del")
+                        .setDescription('Il faut renseigner un nombre pour la commande "-del" entre 1 et 98.\n Les messages doivent être récent (14 jours maximum).')
+                        .setThumbnail("https://media.discordapp.net/attachments/782252712024342558/803929129753641040/Ramsesbot2.png")
+                        .setFooter("Ne pas envoyer de dm au RamsesBot!")
+                        .setTimestamp()
+                        msg.author.send(embed3)
+                        console.log("Erreur de syntaxe")
+                    }
+
                 }
-               else if (!msg.member.hasPermission("MANAGE_MESSAGES")) {
-                msg.author.send("Pas la permission de supprimer des messages avec la commande -del sur le server "+ msg.guild.name +".")
-               }
+
             }
+           else if (!msg.member.hasPermission("MANAGE_MESSAGES")) {
+            msg.author.send("Pas la permission de supprimer des messages avec la commande -del sur le server"+ msg.guild.name +".")
+           }
+        }
             // -----------------------------------FIN-CLEAR-----------------------------------------------
 
 
