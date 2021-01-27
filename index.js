@@ -387,38 +387,90 @@ Client.on("message", msg => {
         }
     }
     //------------------------------------Fin KICK via commandes------------------------------------------
-        //-----------------------------------------MUSIQUE-/TEST/----------------------------------------
-        Client.on("message", msg => {
-            if (msg.content.startsWith(prefix + "p")) {
-                if (msg.member.voice.channel) {
-                    msg.member.voice.channel.join().then(connection => {
-                        let args = msg.content.split(" ")
-                        if (!args[1]) {
-                            msg.channel.send("**Aucun lien youtube.**")
-                            connection.disconnect()
-                        }
-                        else {
-                            let dispatcher = connection.play(ytdl(args[1], { quality: "highestaudio" }))
-                            dispatcher.on("finish", () => {
-                                dispatcher.destroy()
-                                connection.disconnect()
-                            })
-    
-                            dispatcher.on("error", err => {
-                                console.log("erreur de dispatcher" + err)
-                            })
-                        }
-    
-                    }).catch(err => {
-                        msg.reply("**Impossible de se connecter ou aucun lien youtube donné!\n Peut être un probleme de rôles.**")
-                        console.log("L'erreur ==>" + err)
-                    })
-                }
-                else {
-                    msg.reply("Utilisateur non-connecté en vocal.")
-                }
-            }
+    //------------------------------------------TROLL------------------------------------------------
+    if (msg.content == prefix + "tg"){
+        msg.delete()
+        if (msg.member.voice.channel) {
+        msg.member.voice.channel.join().then(connection => {
+            let dispatcher = connection.play(ytdl("https://youtu.be/EvTC5Da3INU", {quality: "highestaudio"}))
+            dispatcher.on("finish", () =>{
+                dispatcher.destroy()
+                connection.disconnect()
+            } )
+        }).catch(err => {
+            console.log("ceci est un echec mon brave")
+
         })
+    }
+    
+}
+if (msg.content === prefix + "ramses") {
+    msg.delete()
+    msg.channel.send("https://media.discordapp.net/attachments/782289396732526613/804107169657389076/Ramsesbot.png")
+}
+        //-----------------------------------------MUSIQUE-/TEST/----------------------------------------
+    Client.on("message", msg => {
+        if (msg.content.startsWith(prefix + "p")) {
+            if (msg.member.voice.channel) {
+                msg.member.voice.channel.join().then(connection => {
+                    let args = msg.content.split(" ")
+                    if (!args[1]) {
+                        var embedmusique = new Discord.MessageEmbed()
+                        .setColor("#FFFF00")
+                        .setTitle("**Ramses Musique**")
+                        .setDescription('Aucun lien youtube !\n La syntaxe correcte de la commande est "-p <urlyoutube>".')
+                        .setThumbnail("https://media.discordapp.net/attachments/782252712024342558/803929129753641040/Ramsesbot2.png")
+                        .setFooter("Ne pas envoyer de dm au RamsesBot!")
+                        .setTimestamp()
+                         const channel01 = Client.channels.cache.find(channel => channel.id === "804062264821940255")
+                       // channel01.send("**Aucun lien youtube.**")
+                        channel01.send(embedmusique)
+                        connection.disconnect()
+                    }
+                    else {
+                        let dispatcher = connection.play(ytdl(args[1], { quality: "highestaudio" }))
+                        dispatcher.on("finish", () => {
+                            dispatcher.destroy()
+                            connection.disconnect()
+                        })
+
+                        dispatcher.on("error", err => {
+                            console.log("erreur de dispatcher" + err)
+                           // const channel01 = Client.channels.cache.find(channel => channel.id === "804062264821940255")
+                          //  channel01.send("Résultats de l'erreur ==>\n" + err)
+                        var embedmusique2 = new Discord.MessageEmbed()
+                        .setColor("#FFFF00")
+                        .setTitle("**Ramses Musique**")
+                        .setDescription('erreur :' + err)
+                        .setThumbnail("https://media.discordapp.net/attachments/782252712024342558/803929129753641040/Ramsesbot2.png")
+                        .setFooter("Ne pas envoyer de dm au RamsesBot!")
+                        .setTimestamp()
+                        const channel01 = Client.channels.cache.find(channel => channel.id === "804062264821940255")
+                        channel01.send(embedmusique2)
+                            connection.disconnect()
+                        })
+                    }
+
+                }).catch(err => {
+                    msg.reply("**Impossible de se connecter ou aucun lien youtube donné!\n Peut être un probleme de rôles.**")
+                    console.log("L'erreur ==>" + err)
+                    msg.author.send("L'erreur ==>" + err + "\n j'avais la flemme de faire un embed pour cette erreur mdr\n si t'as cette erreur sache que c'est celle qui est la moins probable d'arriver donc tu dois être une sacré grosse merde👍")
+                    
+                })
+            }
+            else {
+                const channel01 = Client.channels.cache.find(channel => channel.id === "804062264821940255")
+                var embedmusique3 = new Discord.MessageEmbed()
+                        .setColor("#FFFF00")
+                        .setTitle("**Ramses Musique**")
+                        .setDescription('Utilisateur non-connecté dans un channel vocal')
+                        .setThumbnail("https://media.discordapp.net/attachments/782252712024342558/803929129753641040/Ramsesbot2.png")
+                        .setFooter("Ne pas envoyer de dm au RamsesBot!")
+                        .setTimestamp()
+                channel01.send(embedmusique3)
+            }
+        }
+    })
         // -----------------------------------CLEAR-------------------------------------------------
         if (msg.content.startsWith("-del")) {
             msg.delete();
@@ -430,7 +482,7 @@ Client.on("message", msg => {
                         msg.channel.bulkDelete(args[1])
                         console.log(args[1] + " messages on été supprimés.")
                         const channel01 = Client.channels.cache.find(channel => channel.id === "804062264821940255")
-                        channel01.send(args[1] + " messages on été supprimés.")
+                        channel01.send(args[1] + " message(s) supprimé(s).")
                         console.log("Message envoyé dans le channel log sur discord.")
 
                     }
@@ -502,7 +554,7 @@ Client.on("message", msg => {
             .setAuthor("lebg#8303", "https://media.discordapp.net/attachments/782252712024342558/803734305410252820/ErYCnRAXAAUQjv0.png?width=960&height=638" ,/*"Ici inserer le lien du site robinmichelle."*/)
             .setDescription("resumé des commandes disponibles pour le bot.\nTEMPMUTE+KICK+MUTE v1.2")
             .setThumbnail("https://media.discordapp.net/attachments/782252712024342558/803929129753641040/Ramsesbot2.png")
-            .addField("Commandes utile", "-salut \n-stat \n-sexe \n-suis je le pharaon ?\n-p <URLYTB>\n-autorole\n-?", true)
+            .addField("Commandes utile", "-salut \n-stat \n-sexe \n-suis je le pharaon ?\n-p <URLYTB>\n-autorole\n-?\n-tg\n-ramses", true)
             .addField("Commandes Chachi", "-gay\n-dice", true)
             .addField("Commande Admin", "-mute (ADMIN) \n-kick (ADMIN)\n-tempmute(ADMIN) => -tempmute <@personne> <nbSecondes>\n-del <nbMessage>", true)
             .setFooter("Ne pas envoyer de dm au RamsesBot!")
