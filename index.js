@@ -483,19 +483,20 @@ Client.on("message", msg => {
         msg.reply("je suis fidele a mamaxou...");
 
         if (msg.content == prefix + "cmd") {
+            msg.delete()
             var embed = new Discord.MessageEmbed()
             .setColor("#FFFF00")
             .setTitle("**Commandes de RamsesBot.**")
             .setAuthor("lebg#8303", "https://media.discordapp.net/attachments/782252712024342558/803734305410252820/ErYCnRAXAAUQjv0.png?width=960&height=638" ,/*"Ici inserer le lien du site robinmichelle."*/)
             .setDescription("resumé des commandes disponibles pour le bot.\nTEMPMUTE+KICK+MUTE v1.2")
-            .setThumbnail("https://media.discordapp.net/attachments/782289396732526613/803725723545501736/IMG_20200408_213813.jpg")
+            .setThumbnail("https://media.discordapp.net/attachments/782252712024342558/803929129753641040/Ramsesbot2.png")
             .addField("Commandes utile", "-salut \n-stat \n-sexe \n-suis je le pharaon ?\n-p <URLYTB>\n-autorole\n-?", true)
             .addField("Commandes Chachi", "-gay\n-dice", true)
             .addField("Commande Admin", "-mute (ADMIN) \n-kick (ADMIN)\n-tempmute(ADMIN) => -tempmute <@personne> <nbSecondes>\n-del <nbMessage>", true)
             .setFooter("Ne pas envoyer de dm au RamsesBot!")
             .setTimestamp()
             msg.author.send(embed)
-            
+            msg.delete()
         }
 
     if (msg.content == prefix + "cmd2") {
@@ -508,8 +509,20 @@ Client.on("message", msg => {
     }
 
     if (msg.content == prefix + "autorole") {
+       
+        var embed2 = new Discord.MessageEmbed()
+        .setColor("#FFFF00")
+        .setTitle("**Autorole**")
+        .setAuthor("lebg#8303", "https://media.discordapp.net/attachments/782252712024342558/803734305410252820/ErYCnRAXAAUQjv0.png?width=960&height=638" ,/*"Ici inserer le lien du site robinmichelle."*/)
+        .setDescription("**Utilisateur qui ont l'autorole actif.**\nl’autorole est un ingénieux stratagème conçu par matthieu ayant pour but d’attribuer des rôles automatiquement lorsqu’une personne spécifique rejoint le discord désiré")
+        .setThumbnail("https://media.discordapp.net/attachments/782252712024342558/803929129753641040/Ramsesbot2.png")
+        .addField("Les personnes prises en compte par l'autorole sont :", "\n-Enzo\n-Louis\n-Jules (Dxsmr)\n-Maxence\n-Cesaire\n-Oscar\n-Fernandez\nJean/Awak")
+        .setFooter("Ne pas envoyer de dm au RamsesBot!")
+        .setTimestamp()
+        
+        msg.author.send(embed2)
         msg.delete()
-        msg.author.send("Les personnes prises en charge par l'autorole sont :\n-Enzo\n-Louis\n-Jules (Dxsmr)\n-Maxence\n-Cesaire\n-Oscar\n-Fernandez\nJean/Awak")
+        //msg.author.send("Les personnes prises en charge par l'autorole sont :\n-Enzo\n-Louis\n-Jules (Dxsmr)\n-Maxence\n-Cesaire\n-Oscar\n-Fernandez\nJean/Awak")
     }
 
     if (msg.author.id == 173439999331663872) {
