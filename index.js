@@ -371,21 +371,23 @@ Client.on("message", msg => {
          }
         // si un jour je trouve le moyen de faire marcher cette commande je bondis de joie (en gros si tu tentes de faire la commande mais que t'es pas admin ca t'envoie un message d'erreur.)
     }*/
-    else if (!msg.member.hasPermission("ADMINISTRATOR")) {
-        if (msg.content.startsWith(prefix + "kick")) {
+    if (msg.content.startsWith(prefix + "kick")) {
+        if (!msg.member.hasPermission("ADMINISTRATOR")) {
+        msg.channel.send("Tu n'as pas la permission d'effectuer cette commande.")
+    }
+    
+        if (msg.content.startsWith(prefix + "mute")) {
+             if (!msg.member.hasPermission("ADMINISTRATOR")) {
             msg.channel.send("Tu n'as pas la permission d'effectuer cette commande.")
         }
-        else if (!msg.member.hasPermission("ADMINISTRATOR")) {
-            if (msg.content.startsWith(prefix + "mute")) {
+       
+            if (msg.content.startsWith(prefix + "tempmute")) {
+                if (!msg.member.hasPermission("ADMINISTRATOR")) {
                 msg.channel.send("Tu n'as pas la permission d'effectuer cette commande.")
-            }
-            else if (!msg.member.hasPermission("ADMINISTRATOR")) {
-                if (msg.content.startsWith(prefix + "tempmute")) {
-                    msg.channel.send("Tu n'as pas la permission d'effectuer cette commande.")
-                }
             }
         }
     }
+}
     //------------------------------------Fin KICK via commandes------------------------------------------
     //------------------------------------------TROLL------------------------------------------------
     if (msg.content == prefix + "tg"){
