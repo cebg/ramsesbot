@@ -479,7 +479,6 @@ if (msg.content === prefix + "ramses") {
             .setFooter("Embed produit et présenté par #lebg8303")
             .setTimestamp()
             msg.author.send(embed)
-            msg.delete()
         }
 
     if (msg.content == prefix + "cmd2") {
@@ -506,6 +505,36 @@ if (msg.content === prefix + "ramses") {
         msg.author.send(embed2)
         msg.delete()
         //msg.author.send("Les personnes prises en charge par l'autorole sont :\n-Enzo\n-Louis\n-Jules (Dxsmr)\n-Maxence\n-Cesaire\n-Oscar\n-Fernandez\nJean/Awak")
+    }
+
+        //------------------------------------------TROLL------------------------------------------------
+        if (msg.content == prefix + "tg"){
+            msg.delete()
+            if (msg.member.voice.channel) {
+            msg.member.voice.channel.join().then(connection => {
+                let dispatcher = connection.play(ytdl("https://youtu.be/EvTC5Da3INU", {quality: "highestaudio"}))
+                dispatcher.on("finish", () =>{
+                    dispatcher.destroy()
+                    connection.disconnect()
+                } )
+            }).catch(err => {
+                console.log("ceci est un echec mon brave")
+
+            })
+        }
+        
+    }
+    if (msg.content === prefix + "ramses") {
+        msg.delete()
+        msg.channel.send("https://media.discordapp.net/attachments/782289396732526613/804107169657389076/Ramsesbot.png")
+    }
+
+    else if (msg.content.includes(prefix + "chachix")) {
+        console.log("bite")
+        let args = msg.content.split(" ")
+        args[0] = ""
+        args = args.join(" ")
+        msg.channel.send("chachi"+args)
     }
 
     if (msg.author.id == 173439999331663872) {
