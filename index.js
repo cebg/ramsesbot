@@ -327,7 +327,7 @@ if (msg.content === prefix + "ramses") {
     msg.delete()
     msg.channel.send("https://media.discordapp.net/attachments/782289396732526613/804107169657389076/Ramsesbot.png")
 }
-        //-----------------------------------------MUSIQUE-/TEST/----------------------------------------
+        /*//-----------------------------------------MUSIQUE-/TEST/----------------------------------------
     Client.on("message", msg => {
         if (msg.content.startsWith(prefix + "p")) {
             if (msg.member.voice.channel) {
@@ -389,7 +389,7 @@ if (msg.content === prefix + "ramses") {
                 channel01.send(embedmusique3)
             }
         }
-    })
+    })*/
         // -----------------------------------CLEAR-------------------------------------------------
         if (msg.content.startsWith("-del")) {
             msg.delete();
@@ -527,6 +527,7 @@ if (msg.content === prefix + "ramses") {
     if (msg.content === prefix + "ramses") {
         msg.delete()
         msg.channel.send("https://media.discordapp.net/attachments/782289396732526613/804107169657389076/Ramsesbot.png")
+        return
     }
 
     else if (msg.content.includes(prefix + "chachix")) {
