@@ -530,7 +530,7 @@ if (msg.content === prefix + "ramses") {
         return
     }
 
-    else if (msg.content.includes(prefix + "chachix")) {
+    if (msg.content.includes(prefix + "chachix")) {
         console.log("bite")
         msg.delete()
         let args = msg.content.split(" ")
