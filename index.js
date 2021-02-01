@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 const Client = new Discord.Client;
-const ytdl = require("ytdl-core") //(Pour qu'il puisse communiquer avec ytb)
+const ytdl = require("ytdl-core") //(Pour qu'il puisse communiquer avec ytb) c'est installé mtn lol
 const prefix = "-"; // le prefixe est un tiret la donc a envoyer avant chaque message si je merdes pas trop.
 
 Client.on("ready", () => {
