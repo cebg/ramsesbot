@@ -374,7 +374,7 @@ if (msg.content === prefix + "ramses") {
                     msg.reply("**Impossible de se connecter ou aucun lien youtube donné!\n Peut être un probleme de rôles.**")
                     console.log("L'erreur ==>" + err)
                     msg.author.send("L'erreur ==>" + err + "\n j'avais la flemme de faire un embed pour cette erreur mdr\n si t'as cette erreur sache que c'est celle qui est la moins probable d'arriver donc tu dois être une sacré grosse merde👍")
-                    
+                    return
                 })
             }
             else {
@@ -532,6 +532,7 @@ if (msg.content === prefix + "ramses") {
 
     else if (msg.content.includes(prefix + "chachix")) {
         console.log("bite")
+        msg.delete()
         let args = msg.content.split(" ")
         args[0] = ""
         args = args.join(" ")
