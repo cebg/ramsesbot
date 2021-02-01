@@ -475,7 +475,7 @@ if (msg.content === prefix + "ramses") {
             .setThumbnail("https://media.discordapp.net/attachments/782252712024342558/803929129753641040/Ramsesbot2.png")
             .addField("Commandes utile", "-salut \n-stat \n-sexe \n-suis je le pharaon ?\n-p <URLYTB>\n-autorole\n-?\n-tg\n-ramses", true)
             .addField("Commandes Chachi", "-gay\n-dice", true)
-            .addField("Commande Admin", "-mute (ADMIN) \n-kick (ADMIN)\n-tempmute(ADMIN) => -tempmute <@personne> <nbSecondes>\n-del <nbMessage>", true)
+            .addField("Commande Admin", "*-mute (ADMIN)* \n*-kick (ADMIN)*\n*-tempmute(ADMIN) => -tempmute <@personne> <nbSecondes>*\n-del <nbMessage>", true)
             .setFooter("Embed produit et présenté par #lebg8303")
             .setTimestamp()
             msg.author.send(embed)
