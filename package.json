@@ -4,7 +4,8 @@
   "description": "Bot discord dans le but d'optimiser les pouvoirs du haut conseils",
   "main": "index.js",
   "dependencies": {
-    "discord.js": "^12.5.0"
+    "discord.js": "^12.5.0",
+    "ytdl-core": "^4.4.5"
   },
   "devDependencies": {},
   "scripts": {
