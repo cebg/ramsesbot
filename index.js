@@ -327,6 +327,11 @@ if (msg.content === prefix + "ramses") {
     msg.delete()
     msg.channel.send("https://media.discordapp.net/attachments/782289396732526613/804107169657389076/Ramsesbot.png")
 }
+
+if (msg.content === prefix + "tgl") {
+    msg.delete()
+    msg.channel.send("tg")
+}
         /*//-----------------------------------------MUSIQUE-/TEST/----------------------------------------
     Client.on("message", msg => {
         if (msg.content.startsWith(prefix + "p")) {
