@@ -479,7 +479,7 @@ if (msg.author.id == 290186637563002882 && msg.content === prefix + "tgl") {
             .setDescription("resumé des commandes disponibles pour le bot.\nTEMPMUTE+KICK+MUTE v1.2")
             .setThumbnail("https://media.discordapp.net/attachments/782252712024342558/803929129753641040/Ramsesbot2.png")
             .addField("Commandes utile", "-salut \n-stat \n-sexe \n-suis je le pharaon ?\n-p <URLYTB>\n-autorole\n-?\n-tg\n-ramses", true)
-            .addField("Commandes Chachi", "-gay\n-dice", true)
+            .addField("Commandes Chachi", "-gay\n-dice\n-chachix", true)
             .addField("Commande Admin", "*-mute (ADMIN)* \n*-kick (ADMIN)*\n*-tempmute(ADMIN) => -tempmute <@personne> <nbSecondes>*\n-del <nbMessage>", true)
             .setFooter("Embed produit et présenté par #lebg8303")
             .setTimestamp()
