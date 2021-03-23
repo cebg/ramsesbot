@@ -330,8 +330,8 @@ if (msg.content === prefix + "ramses") {
 
 if (msg.author.id === 290186637563002882 && msg.content === prefix + "tgl") {
     msg.delete()
-    msg.channel.send("tg")
-} else if (msg.author.id != 290186637563002882 && msg.content === prefix + "tgl"){
+    msg.channel.send("tg")} 
+if (msg.author.id != 290186637563002882 && msg.content === prefix + "tgl"){
     msg.author.send("tg")
 }
 
