@@ -328,12 +328,12 @@ if (msg.content === prefix + "ramses") {
     msg.channel.send("https://media.discordapp.net/attachments/782289396732526613/804107169657389076/Ramsesbot.png")
 }
 
-if (msg.author.id === 290186637563002882 && msg.content === prefix + "tgl") {
-    msg.delete()
-    msg.channel.send("tg")} 
-if (msg.author.id != 290186637563002882 && msg.content === prefix + "tgl"){
-    msg.author.send("tg")
-}
+//if (msg.author.id === 290186637563002882 && msg.content === prefix + "tgl") {
+  //  msg.delete()
+ //   msg.channel.send("tg")} 
+//if (msg.author.id != 290186637563002882 && msg.content === prefix + "tgl"){
+  //  msg.author.send("tg")
+//}
 
         /*//-----------------------------------------MUSIQUE-/TEST/----------------------------------------
     Client.on("message", msg => {
