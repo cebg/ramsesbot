@@ -327,6 +327,7 @@ if (msg.content === prefix + "ramses") {
     msg.delete()
     msg.channel.send("https://media.discordapp.net/attachments/782289396732526613/804107169657389076/Ramsesbot.png")
 }
+<<<<<<< HEAD
 
 //if (msg.author.id === 290186637563002882 && msg.content === prefix + "tgl") {
   //  msg.delete()
@@ -335,6 +336,8 @@ if (msg.content === prefix + "ramses") {
   //  msg.author.send("tg")
 //}
 
+=======
+>>>>>>> parent of 0cd3cad (Update index.js)
         /*//-----------------------------------------MUSIQUE-/TEST/----------------------------------------
     Client.on("message", msg => {
         if (msg.content.startsWith(prefix + "p")) {
