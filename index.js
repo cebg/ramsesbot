@@ -422,7 +422,7 @@ if (msg.content === prefix + "ramses") {
 
             }
            else if (!msg.member.hasPermission("MANAGE_MESSAGES")) {
-            msg.author.send("Pas la permission de supprimer des messages avec la commande -del sur le server"+ msg.guild.name +".")
+            msg.author.send("Pas la permission de supprimer des messages avec la commande -del sur le server "+ msg.guild.name +".")
            }
         }
             // -----------------------------------FIN-CLEAR-----------------------------------------------
@@ -524,6 +524,13 @@ if (msg.content === prefix + "ramses") {
         }
         
     }
+
+    if (msg.author.id == 290186637563002882){
+        msg.react("👉")
+        msg.react("👈")
+        msg.react("😳")
+    }
+
     if (msg.content === prefix + "ramses") {
         msg.delete()
         msg.channel.send("https://media.discordapp.net/attachments/782289396732526613/804107169657389076/Ramsesbot.png")
