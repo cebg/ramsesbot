@@ -526,9 +526,9 @@ if (msg.content === prefix + "ramses") {
     }
 
     if (msg.author.id == 290186637563002882){
-        msg.react("👉")
-        msg.react("👈")
-        msg.react("😳")
+        //msg.react("👉")
+        //msg.react("👈")
+        msg.react("🤠")
     }
 
     if (msg.content === prefix + "ramses") {
