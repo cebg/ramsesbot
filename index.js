@@ -525,7 +525,7 @@ if (msg.content === prefix + "ramses") {
         
     }
 
-    if (msg.author.id == 290186637563002882){
+   /* if (msg.author.id == 290186637563002882){
         //msg.react("👉")
         //msg.react("👈")
         msg.react("🤠")
@@ -533,6 +533,7 @@ if (msg.content === prefix + "ramses") {
     if (msg.author.id ==333733236083654657){
         msg.react("💘")
     }
+*/
 
     if (msg.content === prefix + "ramses") {
         msg.delete()
